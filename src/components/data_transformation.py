@@ -26,13 +26,13 @@ class DataTransformation:
         This function is responsible for creating a preprocessing object for data transformation.
         '''
         try:
-            numerical_columns = ["writing score", "reading score"]  # Match the DataFrame
+            numerical_columns = ["writing_score", "reading_score"]  # Match the DataFrame
             categorical_columns = [
                 "gender",
-                "race/ethnicity",  # Match the DataFrame
-                "parental level of education",  # Match the DataFrame
+                "race_ethnicity",  # Match the DataFrame
+                "parental_level_of_education",  # Match the DataFrame
                 "lunch",
-                "test preparation course",  # Match the DataFrame
+                "test_preparation_course",  # Match the DataFrame
             ]
 
             num_pipeline = Pipeline(
@@ -81,8 +81,8 @@ class DataTransformation:
 
             preprocessing_obj = self.get_data_transformer_object()
 
-            target_column_name = "math score"  # Ensure this matches the actual column name
-            numerical_columns = ["writing score", "reading score"]  # Adjusted for space
+            target_column_name = "math_score"  # Ensure this matches the actual column name
+            numerical_columns = ["writing_score", "reading_score"]  # Adjusted for space
 
             # Check if target column exists in training dataframe
             if target_column_name not in train_df.columns:
