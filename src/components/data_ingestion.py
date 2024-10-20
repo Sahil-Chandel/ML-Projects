@@ -27,7 +27,7 @@ class DataIngestion:
         logging.info("Entered the data ingestion method or component")
         try:
             # Use os.path.join for OS-independent paths
-            df = pd.read_csv(os.path.join('notebook', 'data', 'stud.csv'))
+            df = pd.read_csv('notebook\data\stud.csv')
             logging.info('Read the dataset as dataframe')
 
             # Create directory if it doesn't exist
